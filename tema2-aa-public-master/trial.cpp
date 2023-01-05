@@ -53,7 +53,7 @@ int main() {
         }
         queries.push_back({-i, -COMPUTE_T(i-1, k)}); // eq 5
     }
-    // if (m - 1 > 0)
+    if (m - 1 > 0)
         queries.push_back({-m, -COMPUTE_T(m-1, k)});
     // k--;
     // cout << "DONE\n";

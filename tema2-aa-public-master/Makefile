@@ -4,14 +4,14 @@ LDFLAGS = -lm
 
 build: trial
 
-trial: trial.cpp mediator.o
+trial: trial.cpp SAT.o
 	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
 
 run_trial:
 	./trial
 
 # Object files
-mediator.o: mediator.cpp
+SAT.o: SAT.cpp
 	$(CC) $(CFLAGS) $(LDFLAGS) -c $< -o $@
 
 # Cleanup

@@ -1,14 +1,13 @@
 // Copyright (c) 2023 Valentin-Ioan VINTILA.
 // All rights reserved.
 
-#include "mediator.hpp"
+#include "SAT.hpp"
 
 namespace wi {
-namespace Mediator {
+namespace SAT {
 
-    /*
-     * Asks the oracle for an answer to the formulated question.
-     */
+
+
     std::vector<bool>* solve_SAT(
         const int var_count,
         std::vector< std::vector<int> >& cnf_query
@@ -39,11 +38,11 @@ namespace Mediator {
         // Return said solution
         int n, x;
         fsol >> n;
-        if (n != var_count) {
-            // std::cout << "THIS IS WEIRD! n (" << n
-            //           << ") != var_count (" << var_count << ")"
-            //           << std::endl;
-        }
+        // if (n != var_count) {
+        //     // std::cout << "THIS IS WEIRD! n (" << n
+        //     //           << ") != var_count (" << var_count << ")"
+        //     //           << std::endl;
+        // }
         std::vector<bool>* result = new (std::vector<bool>);
         result->resize(n + 1);
         for (int i = 0; i < n; ++i) {

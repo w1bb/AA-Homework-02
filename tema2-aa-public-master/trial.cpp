@@ -1,7 +1,7 @@
 // Copyright (c) 2023 Valentin-Ioan VINTILA.
 // All rights reserved.
 
-#include "mediator.hpp"
+#include "SAT.hpp"
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -105,7 +105,7 @@ int main() {
     //     cout << endl;
     // }
 
-    vector<bool>* sol = wi::Mediator::solve_SAT((m - 1) * k + n, queries);
+    vector<bool>* sol = wi::SAT::solve_SAT((m - 1) * k + n, queries);
     if (!sol) {
         cout << "False";
     } else {

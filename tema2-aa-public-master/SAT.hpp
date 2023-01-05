@@ -1,8 +1,8 @@
 // Copyright (c) 2023 Valentin-Ioan VINTILA.
 // All rights reserved.
 
-#ifndef _WI_MEDIATOR_HPP
-#define _WI_MEDIATOR_HPP
+#ifndef _WI_SAT_HPP
+#define _WI_SAT_HPP
 
 #include <bits/stdc++.h>
 #include <iostream>
@@ -13,7 +13,7 @@
 #include <string>
 
 namespace wi {
-namespace Mediator {
+namespace SAT {
 
     std::vector<bool>* solve_SAT(
         const int var_count,
@@ -24,4 +24,4 @@ namespace Mediator {
 }
 }
 
-#endif // _WI_MEDIATOR_HPP
+#endif // _WI_SAT_HPP

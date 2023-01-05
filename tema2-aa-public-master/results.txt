@@ -26,184 +26,184 @@ python3              - installed
 		+++++ running test 00-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.042122
+				stage time: 0:00:00.065052
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.030424
+				stage time: 0:00:00.041521
 		----- running test 00-trial - grade 2/2
 
 		+++++ running test 01-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.057526
+				stage time: 0:00:00.050145
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.029682
+				stage time: 0:00:00.053230
 		----- running test 01-trial - grade 2/2
 
 		+++++ running test 02-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.046144
+				stage time: 0:00:00.072955
 			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.032123
-		----- running test 02-trial - grade 2/2
+[F			running check      - WA: Expected True from oracle, but got False
+				stage time: 0:00:00.029412
+		----- running test 02-trial - grade 0/2
 
 		+++++ running test 03-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.071638
+				stage time: 0:00:00.047978
 			running check      ...
-[F			running check      - WA: Expected a set of size 2, but got a set of size 3
-				stage time: 0:00:00.039185
-		----- running test 03-trial - grade 0/2
+[F			running check      - OK
+				stage time: 0:00:00.051155
+		----- running test 03-trial - grade 2/2
 
 		+++++ running test 04-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.070228
+				stage time: 0:00:00.042595
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.058022
+				stage time: 0:00:00.057420
 		----- running test 04-trial - grade 2/2
 
 		+++++ running test 05-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.042942
+				stage time: 0:00:00.066436
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.029818
+				stage time: 0:00:00.043003
 		----- running test 05-trial - grade 2/2
 
 		+++++ running test 06-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.045353
+				stage time: 0:00:00.051111
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.029248
+				stage time: 0:00:00.030187
 		----- running test 06-trial - grade 2/2
 
 		+++++ running test 07-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.070804
+				stage time: 0:00:00.050598
 			running check      ...
-[F			running check      - WA: Expected True from oracle, but got False
-				stage time: 0:00:00.032760
-		----- running test 07-trial - grade 0/2
+[F			running check      - OK
+				stage time: 0:00:00.030632
+		----- running test 07-trial - grade 2/2
 
 		+++++ running test 08-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.050393
+				stage time: 0:00:00.054697
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.035465
+				stage time: 0:00:00.032342
 		----- running test 08-trial - grade 2/2
 
 		+++++ running test 09-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.049899
+				stage time: 0:00:00.083192
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.032767
+				stage time: 0:00:00.054388
 		----- running test 09-trial - grade 2/2
 
 		+++++ running test 10-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.052066
+				stage time: 0:00:00.068617
 			running check      ...
-[F			running check      - WA: Expected a set of size 5, but got a set of size 6
-				stage time: 0:00:00.052142
-		----- running test 10-trial - grade 0/2
+[F			running check      - OK
+				stage time: 0:00:00.043499
+		----- running test 10-trial - grade 2/2
 
 		+++++ running test 11-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.050390
+				stage time: 0:00:00.076404
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.051323
+				stage time: 0:00:00.053549
 		----- running test 11-trial - grade 2/2
 
 		+++++ running test 12-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.041169
+				stage time: 0:00:00.049083
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.028739
+				stage time: 0:00:00.053999
 		----- running test 12-trial - grade 2/2
 
 		+++++ running test 13-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.042487
+				stage time: 0:00:00.055818
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.029410
+				stage time: 0:00:00.033555
 		----- running test 13-trial - grade 2/2
 
 		+++++ running test 14-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.055861
+				stage time: 0:00:00.072667
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.053444
+				stage time: 0:00:00.034136
 		----- running test 14-trial - grade 2/2
 
 		+++++ running test 15-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.058516
+				stage time: 0:00:00.093530
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.052109
+				stage time: 0:00:00.035665
 		----- running test 15-trial - grade 2/2
 
 		+++++ running test 16-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.066459
+				stage time: 0:00:00.222796
 			running check      ...
-[F			running check      - WA: Expected a set of size 4, but got a set of size 6
-				stage time: 0:00:00.028833
-		----- running test 16-trial - grade 0/2
+[F			running check      - OK
+				stage time: 0:00:00.052428
+		----- running test 16-trial - grade 2/2
 
 		+++++ running test 17-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.087119
+				stage time: 0:00:00.083642
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.053874
+				stage time: 0:00:00.030313
 		----- running test 17-trial - grade 2/2
 
 		+++++ running test 18-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.061300
+				stage time: 0:00:00.096190
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.037560
+				stage time: 0:00:00.030151
 		----- running test 18-trial - grade 2/2
 
 		+++++ running test 19-trial
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.071466
+				stage time: 0:00:00.143255
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.033278
+				stage time: 0:00:00.036887
 		----- running test 19-trial - grade 2/2
 
-	----- running task trial - grade 32/40
+	----- running task trial - grade 38/40
 
 ----- running all tasks
 
@@ -214,8 +214,8 @@ python3              - installed
 +++++ make_clean ...
 ----- make_clean
 
-			Final grade: 32
-TOTAL: 32/100
+			Final grade: 38
+TOTAL: 38/100
 
 
-Total execution time: 0:00:05.632151
+Total execution time: 0:00:06.147756

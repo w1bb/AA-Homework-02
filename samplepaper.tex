@@ -1,0 +1,78 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage[center]{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{listings}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\renewcommand{\qed}{\hfill$\blacksquare$}
+
+\begin{document}
+%
+\title{Octavian's Saga -- README}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Valentin-Ioan Vintilă}
+
+\institute{Faculty of Automatic Control and Computer Science\\University Politehnica of Bucharest}
+
+\maketitle
+
+\section{Task 1}
+
+In order to prove that $SAT\leq_P Set\ Cover$, I have decided to use the fact that $SAT\leq_P Vertex\ Cover$ has already been proven.
+
+\subsection{Formal definition of the Set Cover problem}
+
+Let $U$ be a set of elements and $C=\{S_1,S_2,...,S_n\}$ be a collection of subsets of $U$. A \textit{set cover} is a subcollection $C'\subseteq C$ whose union is $U$, meaning that, if $C'=\{X_1,X_2,\hdots,X_{|C'|}\}$, then $X_1\cup X_2\cup\hdots\cup X_{|C'|}=U$.
+
+In the assignment, the example provided states that $U=\{1,2,3,4\}$, $S_1=\{1,2\}$, $S_2=\{2,3,4\}$ and $S_3=\{2,3\}$. It is then obvious that $C'=\{S_1,S_2\}$ is a set cover, while $C''=\{S_2,S_3\}$ is not.
+
+\subsection{Proving that $Vertex\ Cover \leq_P Set\ Cover$}
+
+Let $G=(V,E)$ be a graph. Then, let $U$ and $C$ be defined such that:
+\begin{itemize}
+	\item The edges represent the elements in $U$, meaning that $E\to U$;
+	\item The vertices correspond to the elements in $C$, meaning that $V\to C$.
+\end{itemize}
+
+\begin{example}
+	Consider the graph $G(V,E)$ where $V=\{1,\hdots,6\}$ and: $$E=\left\{e_1(1,2);e_2(1,5);e_3(2,3);e_4(2,4);e_5(3,4);e_6(3,6); e_7(4,5); e_8(5,6)\right\}$$
+	A representation of such a graph can be found bellow: TODO
+	
+	In such a scenario, $U=E$ would yield $U=\{e_1,\hdots,e_8\}$ and the mapping $V\to C$ would correspond to:
+	\begin{align*}
+		S_1&=\left\{e_1,e_2\right\}\\
+		S_2&=\left\{e_1,e_3,e_4\right\}\\
+		S_3&=\left\{e_3,e_5,e_6\right\}\\
+		S_4&=\left\{e_4,e_5,e_7\right\}\\
+		S_5&=\left\{e_2,e_7,e_8\right\}\\
+		S_6&=\left\{e_6,e_8\right\}
+	\end{align*}
+\end{example}
+
+\end{document}

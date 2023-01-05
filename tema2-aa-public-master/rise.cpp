@@ -43,14 +43,6 @@ int main() {
         }
     }
 
-    // cout << "Here is the final general query:\n";
-    // for (vector<int>& v : general_queries) {
-    //     for (int x : v) {
-    //         cout << x << ' ';
-    //     }
-    //     cout << endl;
-    // }
-
     for (int k = 1; k <= p; ++k) {
         vector< vector<int> > queries = general_queries;
         wi::SAT::convert_to_at_most_k_cnf_query(p, queries, k);

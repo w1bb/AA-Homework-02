@@ -28,67 +28,8 @@ int main() {
             queries[x - 1].push_back(i);
         }
     }
-
-    // Add sequential encoding
-
-    // for (int i = 1; i <= m; ++i) {
-    //     for (int j = 1; j <= k; ++j) {
-    //         const int t = (i-1) * k + (j-1) + 1 + n;
-    //         cout << "Encoding (" << i << ", " << j << "): " << t << endl;
-    //     }
-    // }
-
-    // k++;
+    
     wi::SAT::convert_to_at_most_k_cnf_query(m, queries, k);
-    // k--;
-    // cout << "DONE\n";
-
-    // // Step 1:
-    // for (int i = 1; i <= m-1; ++i) {
-    //     const int j = 1;
-    //     const int t = (i-1) * k + (j-1) + 1 + n;
-    //     queries.push_back({-i, t});
-    // }
-
-    // // Step 2:
-    // for (int j = 2; j <= m; ++j) {
-    //     const int i = 1;
-    //     const int t = (i-1) * k + (j-1) + 1 + n;
-    //     queries.push_back({-t});
-    // }
-
-    // // Step 3:
-    // for (int i = 2; i <= m-1; ++i) {
-    //     for (int j = 1; j <= k; ++j) {
-    //         const int t1 = (i-1-1) * k + (j-1) + 1 + n;
-    //         const int t2 = (i-1) * k + (j-1) + 1 + n;
-    //         queries.push_back({-t1, t2});
-    //     }
-    // }
-
-    // // Step 4:
-    // for (int i = 2; i <= m-1; ++i) {
-    //     for (int j = 2; j <= k; ++j) {
-    //         const int t1 = (i-1-1) * k + (j-1-1) + 1 + n;
-    //         const int t2 = (i-1) * k + (j-1) + 1 + n;
-    //         queries.push_back({-i, -t1, t2});
-    //     }
-    // }
-
-    // // Step 5:
-    // for (int i = 1; i <= m; ++i) {
-    //     const int j = k;
-    //     const int t = (i-1-1) * k + (j-1) + 1 + n;
-    //     queries.push_back({-i, t});
-    // }
-
-    // cout << "Here is the final query (" << (m - 1) * k + n << " vars):\n";
-    // for (vector<int>& v : queries) {
-    //     for (int x : v) {
-    //         cout << x << ' ';
-    //     }
-    //     cout << endl;
-    // }
 
     vector<bool>* sol = wi::SAT::solve_SAT(
         wi::SAT::count_variables_in_queries(queries),

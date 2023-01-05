@@ -21,189 +21,99 @@ python3              - installed
 
 
 
-	+++++ running task rise (20p) ...
+	+++++ running task redemption (30p) ...
 
-		+++++ running test 00-rise
+		+++++ running test 00-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.141949
+				stage time: 0:00:00.005701
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.060922
-		----- running test 00-rise - grade 1/1
+				stage time: 0:00:00.054053
+		----- running test 00-redemption - grade 2.5/3
 
-		+++++ running test 01-rise
+		+++++ running test 01-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.044222
+				stage time: 0:00:00.003954
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.037215
-		----- running test 01-rise - grade 1/1
+				stage time: 0:00:00.050867
+		----- running test 01-redemption - grade 3/3
 
-		+++++ running test 02-rise
+		+++++ running test 02-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.049848
+				stage time: 0:00:00.005131
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.036575
-		----- running test 02-rise - grade 1/1
+				stage time: 0:00:00.051579
+		----- running test 02-redemption - grade 3/3
 
-		+++++ running test 03-rise
+		+++++ running test 03-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.279174
+				stage time: 0:00:00.005896
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.032653
-		----- running test 03-rise - grade 1/1
+				stage time: 0:00:00.055343
+		----- running test 03-redemption - grade 2.5/3
 
-		+++++ running test 04-rise
+		+++++ running test 04-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.177070
+				stage time: 0:00:00.007464
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.034057
-		----- running test 04-rise - grade 1/1
+				stage time: 0:00:00.030609
+		----- running test 04-redemption - grade 0/3
 
-		+++++ running test 05-rise
+		+++++ running test 05-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.109306
+				stage time: 0:00:00.005128
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.053421
-		----- running test 05-rise - grade 1/1
+				stage time: 0:00:00.051410
+		----- running test 05-redemption - grade 3/3
 
-		+++++ running test 06-rise
+		+++++ running test 06-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.156599
+				stage time: 0:00:00.009769
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.033882
-		----- running test 06-rise - grade 1/1
+				stage time: 0:00:00.056116
+		----- running test 06-redemption - grade 3/3
 
-		+++++ running test 07-rise
+		+++++ running test 07-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.092889
+				stage time: 0:00:00.024451
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.034939
-		----- running test 07-rise - grade 1/1
+				stage time: 0:00:00.136300
+		----- running test 07-redemption - grade 0/3
 
-		+++++ running test 08-rise
+		+++++ running test 08-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.139469
+				stage time: 0:00:00.030655
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.058102
-		----- running test 08-rise - grade 1/1
+				stage time: 0:00:00.159468
+		----- running test 08-redemption - grade 0/3
 
-		+++++ running test 09-rise
+		+++++ running test 09-redemption
 			running test       ...
 [F			running test       - OK
-				stage time: 0:00:00.104057
+				stage time: 0:00:00.026880
 			running check      ...
 [F			running check      - OK
-				stage time: 0:00:00.039406
-		----- running test 09-rise - grade 1/1
+				stage time: 0:00:00.512296
+		----- running test 09-redemption - grade 0/3
 
-		+++++ running test 10-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.159884
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.051032
-		----- running test 10-rise - grade 1/1
-
-		+++++ running test 11-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.264078
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.037831
-		----- running test 11-rise - grade 1/1
-
-		+++++ running test 12-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.166627
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.057257
-		----- running test 12-rise - grade 1/1
-
-		+++++ running test 13-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.113502
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.043039
-		----- running test 13-rise - grade 1/1
-
-		+++++ running test 14-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.072309
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.034748
-		----- running test 14-rise - grade 1/1
-
-		+++++ running test 15-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.050197
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.051275
-		----- running test 15-rise - grade 1/1
-
-		+++++ running test 16-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.154242
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.055608
-		----- running test 16-rise - grade 1/1
-
-		+++++ running test 17-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.183241
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.033536
-		----- running test 17-rise - grade 1/1
-
-		+++++ running test 18-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.188898
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.075153
-		----- running test 18-rise - grade 1/1
-
-		+++++ running test 19-rise
-			running test       ...
-[F			running test       - OK
-				stage time: 0:00:00.209042
-			running check      ...
-[F			running check      - OK
-				stage time: 0:00:00.029886
-		----- running test 19-rise - grade 1/1
-
-	----- running task rise - grade 20/20
+	----- running task redemption - grade 17/30
 
 ----- running all tasks
 
@@ -214,8 +124,8 @@ python3              - installed
 +++++ make_clean ...
 ----- make_clean
 
-			Final grade: 20
-TOTAL: 20/100
+			Final grade: 17
+TOTAL: 17/100
 
 
-Total execution time: 0:00:06.350539
+Total execution time: 0:00:02.460967

@@ -6,8 +6,6 @@
 
 using namespace std;
 
-#define COMPUTE_T(i, j) (((i)-1) * k + ((j)-1) + 1 + m)
-
 int main() {
     int n, m, k;
     cin >> n >> m >> k;
@@ -41,20 +39,7 @@ int main() {
     // }
 
     // k++;
-    queries.push_back({-1, COMPUTE_T(1, 1)}); // eq 1
-    for (int j = 1+1; j <= k; ++j)
-        queries.push_back({-COMPUTE_T(1, j)}); // eq 2
-    for (int i = 1+1; i < m; ++i) {
-        queries.push_back({-i, COMPUTE_T(i, 1)}); // eq 1
-        queries.push_back({-COMPUTE_T(i-1, 1), COMPUTE_T(i, 1)});
-        for (int j = 1+1; j <= k; ++j) {
-            queries.push_back({-i, -COMPUTE_T(i-1, j-1), COMPUTE_T(i, j)}); // eq 4
-            queries.push_back({-COMPUTE_T(i-1, j), COMPUTE_T(i, j)}); // eq 3
-        }
-        queries.push_back({-i, -COMPUTE_T(i-1, k)}); // eq 5
-    }
-    if (m - 1 > 0)
-        queries.push_back({-m, -COMPUTE_T(m-1, k)});
+    wi::SAT::convert_to_at_most_k_cnf_query(m, queries, k);
     // k--;
     // cout << "DONE\n";
 
@@ -105,7 +90,10 @@ int main() {
     //     cout << endl;
     // }
 
-    vector<bool>* sol = wi::SAT::solve_SAT((m - 1) * k + n, queries);
+    vector<bool>* sol = wi::SAT::solve_SAT(
+        wi::SAT::count_variables_in_queries(queries),
+        queries
+    );
     if (!sol) {
         cout << "False";
     } else {

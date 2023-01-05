@@ -40,9 +40,9 @@ namespace Mediator {
         int n, x;
         fsol >> n;
         if (n != var_count) {
-            std::cout << "THIS IS WEIRD! n (" << n
-                      << ") != var_count (" << var_count << ")"
-                      << std::endl;
+            // std::cout << "THIS IS WEIRD! n (" << n
+            //           << ") != var_count (" << var_count << ")"
+            //           << std::endl;
         }
         std::vector<bool>* result = new (std::vector<bool>);
         result->resize(n + 1);

@@ -1,0 +1,221 @@
+./tasks/config.json
++++++ check_deps ...
+system               - Linux
+	 config: Linux wihatearch 6.1.2-arch1-1 #1 SMP PREEMPT_DYNAMIC Sat, 31 Dec 2022 17:40:35 +0000 x86_64 GNU/Linux
+gcc                  - installed
+	version: gcc (GCC) 12.2.0
+g++                  - installed
+	version: g++ (GCC) 12.2.0
+javac                - installed
+	version: javac 19.0.1
+python3              - installed
+	version: Python 3.10.9
+----- check_deps
+
++++++ make_build ...
+----- make_build
++++++ running all tasks
+
+			(please enable sound)
+
+
+
+
+	+++++ running task trial (40p) ...
+
+		+++++ running test 00-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.042122
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.030424
+		----- running test 00-trial - grade 2/2
+
+		+++++ running test 01-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.057526
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.029682
+		----- running test 01-trial - grade 2/2
+
+		+++++ running test 02-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.046144
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.032123
+		----- running test 02-trial - grade 2/2
+
+		+++++ running test 03-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.071638
+			running check      ...
+[F			running check      - WA: Expected a set of size 2, but got a set of size 3
+				stage time: 0:00:00.039185
+		----- running test 03-trial - grade 0/2
+
+		+++++ running test 04-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.070228
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.058022
+		----- running test 04-trial - grade 2/2
+
+		+++++ running test 05-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.042942
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.029818
+		----- running test 05-trial - grade 2/2
+
+		+++++ running test 06-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.045353
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.029248
+		----- running test 06-trial - grade 2/2
+
+		+++++ running test 07-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.070804
+			running check      ...
+[F			running check      - WA: Expected True from oracle, but got False
+				stage time: 0:00:00.032760
+		----- running test 07-trial - grade 0/2
+
+		+++++ running test 08-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.050393
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.035465
+		----- running test 08-trial - grade 2/2
+
+		+++++ running test 09-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.049899
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.032767
+		----- running test 09-trial - grade 2/2
+
+		+++++ running test 10-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.052066
+			running check      ...
+[F			running check      - WA: Expected a set of size 5, but got a set of size 6
+				stage time: 0:00:00.052142
+		----- running test 10-trial - grade 0/2
+
+		+++++ running test 11-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.050390
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.051323
+		----- running test 11-trial - grade 2/2
+
+		+++++ running test 12-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.041169
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.028739
+		----- running test 12-trial - grade 2/2
+
+		+++++ running test 13-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.042487
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.029410
+		----- running test 13-trial - grade 2/2
+
+		+++++ running test 14-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.055861
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.053444
+		----- running test 14-trial - grade 2/2
+
+		+++++ running test 15-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.058516
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.052109
+		----- running test 15-trial - grade 2/2
+
+		+++++ running test 16-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.066459
+			running check      ...
+[F			running check      - WA: Expected a set of size 4, but got a set of size 6
+				stage time: 0:00:00.028833
+		----- running test 16-trial - grade 0/2
+
+		+++++ running test 17-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.087119
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.053874
+		----- running test 17-trial - grade 2/2
+
+		+++++ running test 18-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.061300
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.037560
+		----- running test 18-trial - grade 2/2
+
+		+++++ running test 19-trial
+			running test       ...
+[F			running test       - OK
+				stage time: 0:00:00.071466
+			running check      ...
+[F			running check      - OK
+				stage time: 0:00:00.033278
+		----- running test 19-trial - grade 2/2
+
+	----- running task trial - grade 32/40
+
+----- running all tasks
+
++++++ running check_readme (10p) ...
+'README' is missing!
+----- running check_readme - grade 0/10
+
++++++ make_clean ...
+----- make_clean
+
+			Final grade: 32
+TOTAL: 32/100
+
+
+Total execution time: 0:00:05.632151

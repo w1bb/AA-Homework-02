@@ -48,11 +48,12 @@ int main() {
         queries.push_back({-COMPUTE_T(i-1, 1), COMPUTE_T(i, 1)});
         for (int j = 1+1; j <= k; ++j) {
             queries.push_back({-i, -COMPUTE_T(i-1, j-1), COMPUTE_T(i, j)});
-            queries.push_back({-COMPUTE_T(i-1, j), COMPUTE_T(i, j)});
+            // queries.push_back({-COMPUTE_T(i-1, j), COMPUTE_T(i, j)});
         }
         queries.push_back({-i, -COMPUTE_T(i-1, k)});
     }
-    queries.push_back({-m, -COMPUTE_T(m-1, k)});
+    if (m - 1 > 0)
+        queries.push_back({-m, -COMPUTE_T(m-1, k)});
     // cout << "DONE\n";
 
     // // Step 1:
@@ -108,11 +109,11 @@ int main() {
     } else {
         cout << "True" << endl;
         vector<int> indeces;
-        for (int i = 1; i <= k; ++i) {
+        for (int i = 1; i <= m; ++i) {
             if (sol->at(i))
                 indeces.push_back(i);
         }
-        for (int i = 1; indeces.size() < k && i <= k; ++i) {
+        for (int i = 1; indeces.size() < k && i <= m; ++i) {
             if (!sol->at(i))
                 indeces.push_back(i);
         }

@@ -69,7 +69,16 @@ to get the requested number of sets instead.
 
 ### Task 2. Rise
 
-TODO
+By using a `map`, one could convert strings to integers with ease and solve the
+problem using the algorithm implemented above.
+
+Since a "*at most* $k$ sets" algorithm has already been written, one could
+perform a linear / binary search to find the optimal $k$ that solves the
+problem.
+
+> Note: The examples provided yield better results using a linear search, but,
+>       in order to generalize for harder tests, the implementation uses binary
+>       search instead.
 
 ### Task 3. Redemption
 

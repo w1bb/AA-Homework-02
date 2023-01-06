@@ -1,7 +1,11 @@
+# Copyright (c) 2023 Valentin-Ioan VINTILA.
+# All rights reserved.
+
 CC = g++
 CFLAGS = -Wall -Wextra -std=c++17
 LDFLAGS = -lm
 
+# Building everything
 build: trial rise redemption
 
 # Running actions

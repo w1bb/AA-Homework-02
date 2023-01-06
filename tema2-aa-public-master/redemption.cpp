@@ -41,52 +41,81 @@ int main() {
                 all_sets[i].insert(card_to_value[name]);
             }
         }
-        // Remove duplicates
-        // sort(all_sets[i].begin(), all_sets[i].end());
-        // all_sets[i].erase(
-        //     unique(all_sets[i].begin(), all_sets[i].end()),
-        //     all_sets[i].end()
-        // );
     }
-
-    vector<bool> done_with;
-    done_with.resize(last_val + 1);
 
     vector<int> indeces;
 
-    do {
-        int best = 0, best_uncovered = 0;
-        for (int x : all_sets[best])
-            if (!done_with[x])
-                best_uncovered++;
-
-        int current_uncovered;
-        for (int i = 1; i < all_sets.size(); ++i) {
-            current_uncovered = 0;
-            for (int x : all_sets[i])
-                if (!done_with[x])
-                    current_uncovered++;
-            if (current_uncovered > best_uncovered) {
-                best = i;
-                best_uncovered = current_uncovered;
-            }
-        }
+    if (p <= 9) {
+        // cout << "HEY!" << endl;
+        for (int k = 1; k <= p && !indeces.size(); ++k) {
+            string bitmask(k, 1);
+            bitmask.resize(p, 0);
         
-        indeces.push_back(best);
-        for (int x : all_sets[best]) {
-            done_with[x] = true;
-        }
+            // cout << "DOING IT" << endl;
+            do {
+                vector<bool> test;
+                test.resize(last_val + 1);
+                int left = last_val;
 
-        best = 1;
-        for (int i = 1; i < done_with.size(); ++i) {
-            if (!done_with[i]) {
-                best = 0;
-                break;
-            }
+                for (int i = 1; i <= p; ++i)
+                {
+                    if (bitmask[i-1]) {
+                        for (int x : all_sets[i]) {
+                            if (!test[x]) {
+                                test[x] = true;
+                                --left;
+                            }
+                        }
+                    }
+                }
+                if (left == 0) {
+                    for (int i = 1; i <= p; ++i) {
+                        if (bitmask[i-1])
+                            indeces.push_back(i);
+                    }
+                    break;
+                }
+            } while (prev_permutation(bitmask.begin(), bitmask.end()));
+            // cout << "Done once - k=" << k << endl;
         }
-        if (best == 1)
-            break;
-    } while (1);
+    } else {
+        vector<bool> done_with;
+        done_with.resize(last_val + 1);
+
+        do {
+            int best = 0, best_uncovered = 0;
+            for (int x : all_sets[best])
+                if (!done_with[x])
+                    best_uncovered++;
+
+            int current_uncovered;
+            for (int i = 1; i < all_sets.size(); ++i) {
+                current_uncovered = 0;
+                for (int x : all_sets[i])
+                    if (!done_with[x])
+                        current_uncovered++;
+                if (current_uncovered > best_uncovered) {
+                    best = i;
+                    best_uncovered = current_uncovered;
+                }
+            }
+            
+            indeces.push_back(best);
+            for (int x : all_sets[best]) {
+                done_with[x] = true;
+            }
+
+            best = 1;
+            for (int i = 1; i < done_with.size(); ++i) {
+                if (!done_with[i]) {
+                    best = 0;
+                    break;
+                }
+            }
+            if (best == 1)
+                break;
+        } while (1);
+    }
     
     cout << indeces.size() << endl;
     for (int x : indeces)

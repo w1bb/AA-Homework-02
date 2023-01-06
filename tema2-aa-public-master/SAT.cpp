@@ -28,7 +28,7 @@ namespace SAT {
             queries.push_back({-old_variables, -COMPUTE_T(old_variables-1, k)});
     }
 
-    const int count_variables_in_queries(
+    int count_variables_in_queries(
         std::vector< std::vector<int> >& queries
     ) {
         int result = 0;

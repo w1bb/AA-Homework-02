@@ -1,12 +1,13 @@
 # Copyright (c) 2023 Valentin-Ioan VINTILA.
 # All rights reserved.
 
+# Compilation command & flags
 CC = g++
 CFLAGS = -Wall -Wextra -std=c++17
 LDFLAGS = -lm
 
 # Building everything
-build: trial rise redemption
+build: clean trial rise redemption
 
 # Running actions
 run_trial:
@@ -34,4 +35,11 @@ SAT.o: SAT.cpp
 
 # Cleanup
 clean:
-	rm -f *.o trial
+	rm -f *.o trial rise redemption sat.in sat.sol
+
+# ZIP package
+pack:
+	zip -FSr 323_ValentinIoan-VINTILA.zip *.cpp *.hpp Makefile README.md
+
+# These are not files:
+.PHONY: build run_trial run_rise run_redemption clean pack

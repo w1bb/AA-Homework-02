@@ -89,7 +89,7 @@ int main() {
                     best_uncovered++;
 
             int current_uncovered;
-            for (int i = 1; i < all_sets.size(); ++i) {
+            for (int i = 1; i < (int)all_sets.size(); ++i) {
                 current_uncovered = 0;
                 for (int x : all_sets[i])
                     if (!done_with[x])
@@ -106,7 +106,7 @@ int main() {
             }
 
             best = 1;
-            for (int i = 1; i < done_with.size(); ++i) {
+            for (int i = 1; i < (int)done_with.size(); ++i) {
                 if (!done_with[i]) {
                     best = 0;
                     break;

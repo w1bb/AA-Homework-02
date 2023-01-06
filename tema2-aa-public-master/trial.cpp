@@ -44,7 +44,7 @@ int main() {
             if (sol->at(i))
                 indeces.push_back(i);
         }
-        for (int i = 1; indeces.size() < k && i <= m; ++i) {
+        for (int i = 1; (int)indeces.size() < k && i <= m; ++i) {
             if (!sol->at(i))
                 indeces.push_back(i);
         }

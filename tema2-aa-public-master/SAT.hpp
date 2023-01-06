@@ -19,7 +19,7 @@ namespace SAT {
         std::vector< std::vector<int> >& queries,
         const int k
     );
-    const int count_variables_in_queries(
+    int count_variables_in_queries(
         std::vector< std::vector<int> >& queries
     );
     std::vector<bool>* solve_SAT(

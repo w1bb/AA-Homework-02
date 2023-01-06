@@ -1,25 +1,28 @@
 // Copyright (c) 2023 Valentin-Ioan VINTILA.
 // All rights reserved.
 
-#include "SAT.hpp"
-#include <bits/stdc++.h>
+// -----------------------------------------------------------------------------
+// This file implements the SAT algorithm for the first part of the problem.
+// However, once this is implemented, the "rise" section is an easy adaptation
+// of the same algorithm.
+// -----------------------------------------------------------------------------
 
-using namespace std;
+// Include standard libraries
+#include <vector>
+#include <iostream>
+
+// Include the custom SAT communication protocol
+#include "SAT.hpp"
 
 int main() {
+    // Inside the function, std can be used.
+    using namespace std;
+
+    // Generate the original query using the data from the std input
     int n, m, k;
     cin >> n >> m >> k;
     vector< vector<int> > queries;
     queries.resize(n);
-
-    // i = 1 .. n => X1 .. Xn => Xi
-    // t = n+1 ... =>
-    //   i = (t-n-1) / k + 1
-    //   j = (t-n-1) % k + 1
-    //   => R(i, j)
-    // Reversed: t = (i-1) * k + (j-1) + 1 + n
-    // Max t: n * (k + 1)
-
     int aux_n, x;
     for (int i = 1; i <= m; ++i) {
         cin >> aux_n;
@@ -29,25 +32,36 @@ int main() {
         }
     }
     
+    // Compute the final solution
     wi::SAT::convert_to_at_most_k_cnf_query(m, queries, k);
-
     vector<bool>* sol = wi::SAT::solve_SAT(queries);
+
     if (!sol) {
+        // No solution
         cout << "False";
     } else {
+        // At least a solution
         cout << "True" << endl;
         vector<int> indeces;
-        for (int i = 1; i <= m; ++i) {
+
+        // Insert the correct indeces
+        for (int i = 1; i <= m; ++i)
             if (sol->at(i))
                 indeces.push_back(i);
-        }
-        for (int i = 1; (int)indeces.size() < k && i <= m; ++i) {
+        
+        // Fill the rest with other indeces to get exactly k packs
+        for (int i = 1; (int)indeces.size() < k && i <= m; ++i)
             if (!sol->at(i))
                 indeces.push_back(i);
-        }
+        
+        // Output the final indeces
         cout << indeces.size() << endl;
         for (int x : indeces)
             cout << x << ' ';
+
+        // Free the memory allocated by wi::SAT::solve_SAT.
+        delete sol;
     }
+    
     return 0;
 }

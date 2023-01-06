@@ -4,7 +4,17 @@
 // Include the associated header file 
 #include "SAT.hpp"
 
+// A class / struct would be an overkill for such a simple task. This is why
+// everything is defined in two namespaces.
 namespace wi::SAT {
+    /**
+     * This function converts a CNF-SAT query into a CNF-SAT query that only
+     * allows at most k of the initial literals to be true.
+     *
+     * @param old_var_count The original number of variables (literals).
+     * @param query The CNF-SAT query that will be modified in-place.
+     * @param k The most literals that can be set to true.
+     */
     void convert_to_at_most_k_cnf_query(
         const int old_var_count,
         std::vector< std::vector<int> >& query,
@@ -115,11 +125,17 @@ namespace wi::SAT {
         return result;
     }
 
+    /**
+     * This function calls the python SAT implementation.
+     */
     void ask_oracle() {
         std::array<char, 512> buffer{};
         std::string output;
 
-        auto pipe = popen("python3 sat_oracle.py sat.in sat.sol", "r");
+        auto pipe = popen(
+            "python3 sat_oracle.py sat.in sat.sol",
+            "r"
+        );
 
         while (!feof(pipe)) {
             if (fgets(buffer.data(), 512, pipe) != nullptr)

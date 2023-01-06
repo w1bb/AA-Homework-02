@@ -68,6 +68,7 @@ int main() {
                     current_uncovered++;
             if (current_uncovered > best_uncovered) {
                 best = i;
+                best_uncovered = current_uncovered;
             }
         }
         

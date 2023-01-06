@@ -39,7 +39,8 @@ clean:
 
 # ZIP package
 pack:
-	zip -FSr 323_ValentinIoan-VINTILA.zip *.cpp *.hpp Makefile README.md
+	zip -FSr 323CA_ValentinIoan-VINTILA_Tema2.zip \
+		*.cpp *.hpp Makefile README
 
 # These are not files:
 .PHONY: build run_trial run_rise run_redemption clean pack

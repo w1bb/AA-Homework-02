@@ -10,8 +10,16 @@ modern C++. A copy of the assignment shall be provided as well.
 **Hard deadline:** 19 / 01 / 2023
 
 This project will be made available
-[on Github](https://github.com/w1bb/AA-Homework-02) under the **MIT license**
-once the hard deadline passes.
+[on Github](https://github.com/w1bb/AA-Homework-02) once the hard deadline
+passes.
+
+## License
+
+Once the hard deadline passes, this project will be available under the **MIT
+license**. For more info about the author of the code, please check out
+[my personal website](https://v-vintila.com). Other interesting projects are
+made available on [my GitHub page](https://github.com/w1bb) (a follow would be
+greatly appreciated!).
 
 ## Documentation
 
@@ -23,16 +31,30 @@ algorithms actually operate. Please check out the code as well!
 The project is split into multiple parts, following this file structure:
 
 ```
-. = The current (parent) folder;
+src = The current folder containing the checker and the implementation;
 ├── Makefile = The Makefile that will be used in order to build & run the
 ¦              algorithms correctly;
-├── README = This file;
+├── README = The original README file;
 ├── redemption.cpp = The algorithm that solves the 'redemption' task;
 ├── rise.cpp = The algorithm that solves the 'rise' task;
 ├── SAT.cpp = The SAT communication protocol code;
 ├── SAT.hpp = The SAT communication protocol header;
 └── trial.cpp = The algorithm that solves the 'trial' task;
+
+assignment.zip = The original assignment archive;
+assignment.pdf = The original assignment;
+README.md = This file.
 ```
+
+The checker details were left out intentionally.
+
+### Running the checker
+
+In order to run the automated checker, please run `./check` from the `src`
+folder. If a single task should be tested, you can run `./check --task TASK`,
+where `TASK` can be `trial`, `rise` or `redemption`.
+
+More info can be found in the original archive (`assignment.zip`).
 
 ### Task 1. Trial
 

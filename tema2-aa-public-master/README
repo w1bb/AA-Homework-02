@@ -82,4 +82,13 @@ problem.
 
 ### Task 3. Redemption
 
-TODO
+The approximation makes use of two distinct algorithms, chosen based on the pack
+size provided at the input stage. If $p$ is small enough, a brute force
+algorithm can be used to provide an exact answer in a small amount of time.
+However, if $p$ is big, a greedy approach that always chooses the pack that
+contains the most cards that weren't already chosen and are required will
+provide a good enough approximation.
+
+More information can be found bellow:
+- [Wikipedia - Set Cover / Greedy algorithm](https://en.wikipedia.org/wiki/Set_cover_problem#Greedy_algorithm);
+- [Jeremy Kun's article - The Many Faces of Set Cover](https://jeremykun.com/2015/05/04/the-many-faces-of-set-cover/).

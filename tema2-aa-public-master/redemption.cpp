@@ -1,12 +1,25 @@
 // Copyright (c) 2023 Valentin-Ioan VINTILA.
 // All rights reserved.
 
-#include "SAT.hpp"
-#include <bits/stdc++.h>
+// -----------------------------------------------------------------------------
+// This file implements the approximation algorithm used to solve the set cover
+// problem. For a more detailed explanation, please check out the README.
+// -----------------------------------------------------------------------------
 
-using namespace std;
+// Include standard libraries
+#include <map>
+#include <set>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <iostream>
+
+// Include the custom SAT communication protocol
+#include "SAT.hpp"
 
 int main() {
+    using namespace std;
+
     int last_val = 0;
     map<string, int> card_to_value;
 

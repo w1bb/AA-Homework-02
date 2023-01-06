@@ -31,10 +31,7 @@ int main() {
     
     wi::SAT::convert_to_at_most_k_cnf_query(m, queries, k);
 
-    vector<bool>* sol = wi::SAT::solve_SAT(
-        wi::SAT::count_variables_in_queries(queries),
-        queries
-    );
+    vector<bool>* sol = wi::SAT::solve_SAT(queries);
     if (!sol) {
         cout << "False";
     } else {

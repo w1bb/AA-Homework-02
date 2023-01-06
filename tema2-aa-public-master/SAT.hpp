@@ -4,27 +4,25 @@
 #ifndef _WI_SAT_HPP
 #define _WI_SAT_HPP
 
-#include <bits/stdc++.h>
-#include <iostream>
-#include <cstdio>
-#include <fstream>
 #include <array>
-#include <utility>
 #include <string>
+#include <vector>
+#include <fstream>
+#include <iostream>
+#include <algorithm>
 
 namespace wi {
 namespace SAT {
     void convert_to_at_most_k_cnf_query(
-        const int old_variables,
-        std::vector< std::vector<int> >& queries,
+        const int old_var_count,
+        std::vector< std::vector<int> >& query,
         const int k
     );
-    int count_variables_in_queries(
-        std::vector< std::vector<int> >& queries
+    int count_variables_in_query(
+        std::vector< std::vector<int> >& query
     );
     std::vector<bool>* solve_SAT(
-        const int var_count,
-        std::vector< std::vector<int> >& cnf_query
+        std::vector< std::vector<int> >& query
     );
     void ask_oracle();
 

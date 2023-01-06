@@ -1,50 +1,87 @@
 // Copyright (c) 2023 Valentin-Ioan VINTILA.
 // All rights reserved.
 
+// Include the associated header file 
 #include "SAT.hpp"
 
-#define COMPUTE_T(i, j) (((i)-1) * k + ((j)-1) + 1 + old_variables)
-
-namespace wi {
-namespace SAT {
+namespace wi::SAT {
     void convert_to_at_most_k_cnf_query(
-        const int old_variables,
-        std::vector< std::vector<int> >& queries,
+        const int old_var_count,
+        std::vector< std::vector<int> >& query,
         const int k
-    ) {       
-        queries.push_back({-1, COMPUTE_T(1, 1)}); // eq 1
+    ) {
+        // This lambda function computes the R aux literals
+        auto compute_R = [&](const int i, const int j) {
+            return (i-1) * k + j + old_var_count;
+        };
+
+        // Following the articles, these generate the final query:
+
+        // (Part of) Eq. 1
+        query.push_back({-1, compute_R(1, 1)});
+
+        // Eq. 2
         for (int j = 1+1; j <= k; ++j)
-            queries.push_back({-COMPUTE_T(1, j)}); // eq 2
-        for (int i = 1+1; i < old_variables; ++i) {
-            queries.push_back({-i, COMPUTE_T(i, 1)}); // eq 1
-            queries.push_back({-COMPUTE_T(i-1, 1), COMPUTE_T(i, 1)});
+            query.push_back({-compute_R(1, j)});
+        
+        for (int i = 1+1; i < old_var_count; ++i) {
+            // (Part of) Eq. 1
+            query.push_back({-i, compute_R(i, 1)});
+            // (Part of) Eq. 3
+            query.push_back({-compute_R(i-1, 1), compute_R(i, 1)});
+
             for (int j = 1+1; j <= k; ++j) {
-                queries.push_back({-i, -COMPUTE_T(i-1, j-1), COMPUTE_T(i, j)}); // eq 4
-                queries.push_back({-COMPUTE_T(i-1, j), COMPUTE_T(i, j)}); // eq 3
+                // (Part of) Eq. 3
+                query.push_back({-compute_R(i-1, j), compute_R(i, j)});
+                // Eq. 4
+                query.push_back({-i, -compute_R(i-1, j-1), compute_R(i, j)});
             }
-            queries.push_back({-i, -COMPUTE_T(i-1, k)}); // eq 5
+
+            // (Part of) Eq. 5
+            query.push_back({-i, -compute_R(i-1, k)});
         }
-        if (old_variables - 1 > 0)
-            queries.push_back({-old_variables, -COMPUTE_T(old_variables-1, k)});
+
+        // (Part of) Eq. 5
+        if (old_var_count - 1 > 0)
+            query.push_back({-old_var_count, -compute_R(old_var_count-1, k)});
     }
 
-    int count_variables_in_queries(
-        std::vector< std::vector<int> >& queries
+    /**
+     * This function counts the number of variables (literals) used in a CNF-SAT
+     * query.
+     *
+     * @param query The query for which the count is required.
+     * @return The number of variables.
+     */
+    int count_variables_in_query(
+        std::vector< std::vector<int> >& query
     ) {
         int result = 0;
-        for (std::vector<int>& v : queries)
-            result = std::max(result, *std::max_element(v.begin(), v.end()));
+        for (std::vector<int>& v : query)
+            result = std::max(
+                result,
+                *std::max_element(v.begin(), v.end())
+            );
         return result;
     }
 
+    /**
+     * This function solves a CNF-SAT query by calling a Python SAT solver. The
+     * call is made via ask_oracle().
+     *
+     * @param var_count The number of variables found in the SAT 
+     * @return The number of variables.
+     */
     std::vector<bool>* solve_SAT(
-        const int var_count,
-        std::vector< std::vector<int> >& cnf_query
+        std::vector< std::vector<int> >& query
     ) {
+        // Get the literal count in the current query
+        const int var_count = count_variables_in_query(query);
+
         // Generate the input file
         std::ofstream fin("sat.in");
-        fin << "p cnf " << var_count << " " << cnf_query.size();
-        for (std::vector<int>& line : cnf_query) {
+        fin << "p cnf " << var_count << " " << query.size();
+        for (std::vector<int>& line : query) {
             fin.put('\n');
             for (int& x : line)
                 fin << x << ' ';
@@ -67,11 +104,6 @@ namespace SAT {
         // Return said solution
         int n, x;
         fsol >> n;
-        // if (n != var_count) {
-        //     // std::cout << "THIS IS WEIRD! n (" << n
-        //     //           << ") != var_count (" << var_count << ")"
-        //     //           << std::endl;
-        // }
         std::vector<bool>* result = new (std::vector<bool>);
         result->resize(n + 1);
         for (int i = 0; i < n; ++i) {
@@ -84,16 +116,14 @@ namespace SAT {
     }
 
     void ask_oracle() {
-        std::string command = "python3 sat_oracle.py sat.in sat.sol";
         std::array<char, 512> buffer{};
         std::string output;
 
         auto pipe = popen("python3 sat_oracle.py sat.in sat.sol", "r");
 
         while (!feof(pipe)) {
-            if (fgets(buffer.data(), 512, pipe) != nullptr) {
+            if (fgets(buffer.data(), 512, pipe) != nullptr)
                 output += buffer.data();
-            }
         }
 
         auto rc = pclose(pipe);
@@ -103,5 +133,4 @@ namespace SAT {
             exit(-1);
         }
     }
-}
 }

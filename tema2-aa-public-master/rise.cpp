@@ -47,10 +47,7 @@ int main() {
         vector< vector<int> > queries = general_queries;
         wi::SAT::convert_to_at_most_k_cnf_query(p, queries, k);
 
-        vector<bool>* sol = wi::SAT::solve_SAT(
-            wi::SAT::count_variables_in_queries(queries),
-            queries
-        );
+        vector<bool>* sol = wi::SAT::solve_SAT(queries);
         if (sol) {
             vector<int> indeces;
             for (int i = 1; i <= p; ++i) {

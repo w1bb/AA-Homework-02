@@ -1,0 +1,10 @@
+# The archive
+323CA_ValentinIoan-VINTILA_Tema2.zip
+
+# Everything that should be cleaned
+*.o
+trial
+rise
+redemption
+sat.in
+sat.sol

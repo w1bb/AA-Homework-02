@@ -29,7 +29,6 @@ The project is split into multiple parts, following this file structure:
 src = The source folder containing the checker and the implementation;
 ├── Makefile = The Makefile that will be used in order to build & run the
 ¦              algorithms correctly;
-├── README = The original README file;
 ├── redemption.cpp = The algorithm that solves the 'redemption' task;
 ├── rise.cpp = The algorithm that solves the 'rise' task;
 ├── SAT.cpp = The SAT communication protocol code;

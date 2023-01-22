@@ -1,22 +1,17 @@
-# Octavian's Saga
+# Set cover (w/ SAT &amp; approx.)
 
 This repository is intended to store a set-cover implementation written in
-modern C++. A copy of the assignment shall be provided as well.
+modern C++ using the SAT problem. An approximation variant is explained as well.
+A copy of the assignment shall be provided in this repository.
 
 **Full completion date:** 06 / 01 / 2023
 
-**Soft deadline:** 19 / 01 / 2023
-
-**Hard deadline:** 19 / 01 / 2023
-
-This project will be made available
-[on Github](https://github.com/w1bb/AA-Homework-02) once the hard deadline
-passes.
+**Hard deadline:** 20 / 01 / 2023
 
 ## License
 
-Once the hard deadline passes, this project will be available under the **MIT
-license**. For more info about the author of the code, please check out
+This project is available under the **MIT license**.
+For more info about the author of the code, please check out
 [my personal website](https://v-vintila.com). Other interesting projects are
 made available on [my GitHub page](https://github.com/w1bb) (a follow would be
 greatly appreciated!).

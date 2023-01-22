@@ -60,7 +60,7 @@ More info can be found in the original archive (`assignment.zip`).
 
 The first task can be easily solved by considering the fact that each card can
 only be found in zero or more of the $M$ provided sets. This means that, if one
-of the cards is part of the $s_1,..,s_t$ sets ($t\in\mathbb{N}$), a condition
+of the cards is part of the $s_1,..,s_t$ sets (with $t\in\mathbb{N}$), a condition
 asking for at least one of them to be included in the final purchase must be
 set. This can be accomplished using the following formula:
 
@@ -79,7 +79,7 @@ encode the "at most $k$ constraint" in the SAT query. This can be accomplished
 in many ways, but my algorithm implements the **sequential** encoder.
 
 Further information about such encoders can be read here:
-- [SAT Encodings of the At-Most-$k$ Constraint](https://www.it.uu.se/research/group/astra/ModRef10/papers/Alan%20M.%20Frisch%20and%20Paul%20A.%20Giannoros.%20SAT%20Encodings%20of%20the%20At-Most-k%20Constraint%20-%20ModRef%202010.pdf)
+- [SAT Encodings of the At-Most-k Constraint](https://www.it.uu.se/research/group/astra/ModRef10/papers/Alan%20M.%20Frisch%20and%20Paul%20A.%20Giannoros.%20SAT%20Encodings%20of%20the%20At-Most-k%20Constraint%20-%20ModRef%202010.pdf)
   (by Alan M. Frisch and Paul A. Giannaros) - this paper contains information
   about a lot more algorithms and summarizes the Sequential Encoder;
 - [Towards an Optimal CNF Encoding of Boolean Cardinality Constraints](https://www.carstensinz.de/papers/CP-2005.pdf)

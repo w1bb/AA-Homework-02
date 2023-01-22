@@ -26,7 +26,7 @@ algorithms actually operate. Please check out the code as well!
 The project is split into multiple parts, following this file structure:
 
 ```
-src = The current folder containing the checker and the implementation;
+src = The source folder containing the checker and the implementation;
 ├── Makefile = The Makefile that will be used in order to build & run the
 ¦              algorithms correctly;
 ├── README = The original README file;

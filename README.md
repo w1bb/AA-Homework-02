@@ -63,7 +63,7 @@ $$s_1\vee s_2\vee ... \vee s_t$$
 By doing this for each card, we make sure that each card will be included at
 least once in the final pack:
 
-$$(s_{c_1,1}\vee ... \vee s_{c_1,t_1})\,\wedge\,...\,\wedge\,(s_{c_n,1}\vee ... \vee s_{c_n,t_n})$$
+$$(s_{c_1,1}\vee ... \vee s_{c_1,t_1}) \\, \wedge \\, ... \\, \wedge \\, (s_{c_n,1} \vee ... \vee s_{c_n,t_n})$$
 
  However, this condition is not enough, since we
 are interested to check if the problem can be solved using exactly $k$ sets.
